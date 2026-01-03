@@ -11,6 +11,45 @@ class Linko < Formula
   def install
     bin.install "linko"
     etc.install "config/linko.yaml" => "linko.yaml"
+    (etc/"linko.yaml").write DEFAULT_CONFIG
+      end
+
+      def DEFAULT_CONFIG
+        <<~YAML
+          server:
+              listen_addr: 127.0.0.1:9890
+              log_level: info
+          dns:
+              listen_addr: 127.0.0.1:6363
+              domestic_dns:
+                  - 223.5.5.5
+                  - 114.114.114.114
+              foreign_dns:
+                  - 8.8.8.8
+                  - 1.1.1.1
+              cache_ttl: 5m0s
+              tcp_for_foreign: true
+          traffic:
+              enable_realtime: true
+              enable_history: true
+              update_interval: 1s
+              db_path: data/traffic.db
+          firewall:
+              enable_auto: true
+              redirect_dns: true
+              redirect_http: true
+              redirect_https: true
+          upstream:
+              enable: true
+              type: socks5
+              addr: 127.0.0.1:7891
+              username: ""
+              password: ""
+          admin:
+              enable: true
+              listen_addr: 0.0.0.0:9810
+        YAML
+      end
   end
 
   test do
