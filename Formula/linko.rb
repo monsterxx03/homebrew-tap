@@ -5,7 +5,7 @@ class Linko < Formula
   # 直接从 GitHub Release 下载预编译的 arm64 二进制
   url "https://github.com/monsterxx03/linko/releases/download/v0.1.0/linko"
   version "0.1.0"
-  sha256 "binary"
+  sha256 :binary
   license "MIT"
 
   def install
