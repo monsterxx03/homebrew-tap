@@ -13,6 +13,23 @@ class Linko < Formula
     (etc/"linko.yaml").write default_config
   end
 
+  def caveats
+    <<~EOS
+      To start linko automatically:
+        brew services start monsterxx03/tap/linko
+      
+      To run manually:
+        sudo linko serve -c #{etc}/linko.yaml
+    EOS
+  end
+
+  service do
+    run [bin/"linko", "serve", "-c", etc/"linko.yaml"]
+    require_root true
+    keep_alive true
+    working_dir HOMEBREW_PREFIX
+  end
+
   def default_config
     <<~YAML
       server:
