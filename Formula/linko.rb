@@ -11,8 +11,6 @@ class Linko < Formula
     sha256 "afd5f34d78e2f9241370a5ca16bc175de00e71bb3382190824bc7696743849c8"
   end
 
-  bottle :unneeded
-
   def install
     arch = Hardware::CPU.arch == :arm64 ? "arm64" : "amd64"
     bin.install "linko-darwin-#{arch}" => "linko"
