@@ -1,14 +1,14 @@
 class Linko < Formula
   desc "A CLI tool for something"
   homepage "https://github.com/monsterxx03/linko"
-  version "v0.5.1"
+  version "v0.5.2"
 
   if Hardware::CPU.arch == :arm64
-    url "https://github.com/monsterxx03/linko/releases/download/v0.5.1/linko-darwin-arm64"
-    sha256 "26aaacb0e67e1e4aa2765714a57ddbda58880ac5f39889a65f99714693bc7c18"
+    url "https://github.com/monsterxx03/linko/releases/download/v0.5.2/linko-darwin-arm64"
+    sha256 "dc12590e6c6ec170b6fd4155abf96f45feeb77035d8096c101e7165a3ba7c2af"
   else
-    url "https://github.com/monsterxx03/linko/releases/download/v0.5.1/linko-darwin-amd64"
-    sha256 "8d727c7f43e57429db1bd9b584b5f33149d819e16b5af21d5d434392e3041dde"
+    url "https://github.com/monsterxx03/linko/releases/download/v0.5.2/linko-darwin-amd64"
+    sha256 "7978795c44daf3ed4d49de44a18d564666e4ff9519c1db44915761f84c04fec5"
   end
 
   def install
