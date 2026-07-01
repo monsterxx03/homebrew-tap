@@ -1,23 +1,23 @@
 class Tachi < Formula
   desc "Your intelligent terminal AI agent"
   homepage "https://github.com/monsterxx03/tachi"
-  version "v1.2.0"
+  version "v1.3.0"
 
   if OS.mac?
     if Hardware::CPU.arch == :arm64
-      url "https://github.com/monsterxx03/tachi/releases/download/v1.2.0/tachi-darwin-arm64"
-      sha256 "30c58e5f85a6a5c0c0c3ba7d10119fd46cce17d8179491d9245bd50d8621216d"
+      url "https://github.com/monsterxx03/tachi/releases/download/v1.3.0/tachi-darwin-arm64"
+      sha256 "101148c853b721a503c3c76a7f365a40c71b45d8130ec5cb7e7d229e5522a745"
     else
-      url "https://github.com/monsterxx03/tachi/releases/download/v1.2.0/tachi-darwin-amd64"
-      sha256 "bccaa49811c54c956dfc3a6bdc5c385c1d8c2f247e1a40973249043ee3db5a19"
+      url "https://github.com/monsterxx03/tachi/releases/download/v1.3.0/tachi-darwin-amd64"
+      sha256 "f4b61f2b71d553e296ec5d71026656c5c737e42e81354d095849ab7df391118a"
     end
   elsif OS.linux?
     if Hardware::CPU.arch == :arm64
-      url "https://github.com/monsterxx03/tachi/releases/download/v1.2.0/tachi-linux-arm64"
-      sha256 "683a4aa32d6d5c4c25ba17f91b7193d2a41467a1c5e96202549488e7c36454a0"
+      url "https://github.com/monsterxx03/tachi/releases/download/v1.3.0/tachi-linux-arm64"
+      sha256 "f45ee54f41b8a64b4e1a8aca3fbbb55a06d6178a950efc897a3021481470d30c"
     else
-      url "https://github.com/monsterxx03/tachi/releases/download/v1.2.0/tachi-linux-amd64"
-      sha256 "bf5c88002099890fa79f4dcadb34808dc5077648d42551f217a3fd782a22d0e7"
+      url "https://github.com/monsterxx03/tachi/releases/download/v1.3.0/tachi-linux-amd64"
+      sha256 "f25a2c63a15e5f26d98cd19da930d208f04d1bc583a0d5e265ab2b1300849a1c"
     end
   end
 
